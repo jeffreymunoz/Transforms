@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: gold;
+    text-align: center;
+} 
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+nav ul li a{
+    position: relative;
+    display: inline-block;
+    padding: 23px 15px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 17px;
+    width: 120px;
+}
+nav ul li a div{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border: solid 2px black;
+    transform: scale(1.15);
+    opacity: 0;
+    transition: all .3s linear;
+}
+nav ul li a:hover div {
+    transform: scale(1);
+    opacity: 1;
+}
+nav ul li a.active div{
+    transform: scale(1);
+    opacity: 1;
+}
+.active{
+    background-color: goldenrod;
+}
+nav ul li a:hover{
+    background-color: goldenrod;
+    transition-duration: .5s;
+    width: 120px;
+}
+h1{
+    background-color: black;
+    padding: 60px;
+    color: aliceblue;
+    text-align: center;
+}
+
+/*Transform 1*/
+.page1 section{
+    background-color: gray;
+    height: 570px;
+   
+}
+.page1 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page1 section div img{
+    transition: all .5s linear;
+}
+.page1 section div:hover img{
+    transform: scale(1.2);
+}
+.page1 section div aside{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(59, 13, 13, 0.5);
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform: scale(0);
+    transition: all .5s;
+}
+.page1 section div:hover aside{
+    transform: scale(1);
+}
+.page1 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page1 section div:hover aside h3{
+    transform: translateY(0);
+    opacity: 1;
+}
+.page1 section div aside p{
+    margin:  30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page1 section div:hover aside p{
+    transform: translateY(0);
+    opacity: 1;
+}
+.page1 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 40px;
+    opacity: 0;
+    display: inline-block;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page1 section div:hover aside a{
+    opacity: 1;
+}
+
+/*Transform 2*/
+.page2 section{
+    background-color: gray;
+    height: 570px; 
+}
+.page2 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page2 section div aside{
+    position: absolute;
+    top: 405px;
+    right: 0px;
+    left: 425px;
+    bottom: 0;
+    background-color: rgba(13, 19, 116, 0.5);
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all .5s;
+}
+.page2 section div:hover aside{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: rotate(0);
+}
+.page2 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateY(-50px) translateX(60px);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page2 section div:hover aside h3{
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+}
+.page2 section div aside p{
+    margin:  30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateY(50px) translateX(-60px);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page2 section div:hover aside p{
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+}
+.page2 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    display: inline-block;
+    margin: 80px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page2 section div:hover aside a{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+/*Transform 3*/
+.page3 section{
+    background-color: gray;
+    height: 570px; 
+}
+.page3 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page3 section div img{
+    transform: rotate(0) scale(1);
+    transition: all .5s;
+    transition-delay: 0s;
+}
+.page3 section div:hover img{
+    transform: rotate(-6deg) scale(1.2);
+}
+.page3 section div aside{
+    position: absolute;
+    top: -425px;
+    right: 0px;
+    left: 75px;
+    bottom: 0;
+    background-color: rgba(20, 95, 20, 0.6);
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all .5s;
+}
+.page3 section div:hover aside{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: rotate(0);
+}
+.page3 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateY(-90px) translateX(-60px) rotate(-10deg);
+    transition: all .5s;
+    transition-delay: .7s;
+}
+.page3 section div:hover aside h3{
+    transform: translateY(0) translateX(0) rotate(0);
+    opacity: 1;
+}
+.page3 section div aside p{
+    margin: 30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateY(-50px) translateX(60px) rotate(20deg);
+    transition: all .5s;
+    transition-delay: .7s;
+}
+.page3 section div:hover aside p{
+    transform: translateY(0) translateX(0) rotate(0);
+    opacity: 1;
+}
+.page3 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page3 section div:hover aside a{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Transform 4*/
+.page4 section{
+    background-color: gray;
+    height: 570px; 
+}
+.page4 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page4 section div img{
+    transform: scale(1);
+    transition: all .5s;
+    transition-delay: s;
+}
+.page4 section div:hover img{
+    transform: scale(1.2);
+}
+.page4 section div aside{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(119, 117, 10, 0.6);
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform:scale(0) rotate(720deg);
+    transition: all .5s;
+}
+.page4 section div:hover aside{
+    transform: scale(1) rotate(0);
+}
+.page4 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateX(200px) ;
+    transition: all .5s;
+    transition-delay: .6s;
+}
+.page4 section div:hover aside h3{
+    transform: translateX(0) ;
+    opacity: 1;
+}
+.page4 section div aside p{
+    margin: 30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateX(-200px) ;
+    transition: all .5s;
+    transition-delay: .6s;
+}
+.page4 section div:hover aside p{
+    transform: translateX(0) ;
+    opacity: 1;
+}
+.page4 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 200px;
+    display: inline-block;
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .6s;
+}
+.page4 section div:hover aside a{
+    opacity: 1;
+    margin: 0;
+}
+
+/*Transform 5*/
+.page5 section{
+    background-color: gray;
+    height: 570px; 
+}
+.page5 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page5 section div aside{
+    position: absolute;
+    background-color: rgba(119, 117, 10, 0.6);
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform: translateY(-5px) translateX(-500px);
+    transition: all .5s;
+    transition-delay: 0s;
+}
+.page5 section div:hover aside{
+    transform: translateY(-355px) translateX(0);
+}
+.page5 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page5 section div:hover aside h3{
+    opacity: 1;
+    transform: scale(1) rotate(0);
+
+}
+.page5 section div aside p{
+    margin:  30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: translateY(50px) translateX(-60px);
+    transition: all .5s;
+    transition-delay: .9s;
+}
+.page5 section div:hover aside p{
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+}
+.page5 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 50px;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0) rotate(720deg);
+    transition: all .5s;
+    transition-delay: .9s;
+}
+.page5 section div:hover aside a{
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+/*Transform 6*/
+.page6 section{
+    background-color: gray;
+    height: 570px; 
+}
+.page6 section div {
+    position: relative;
+    height: 350px;
+    width: 500px;
+    display: inline-block;
+    margin: 50px 0px 0px 110px;
+    overflow: hidden;
+}
+.page6 section div img{
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1s;
+}
+.page6 section div:hover img{
+    transform: scale(1.5);
+    opacity: 0;
+}
+.page6 section div aside{
+    position: absolute;
+    background-color: darkorange;
+    top:0;
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    transform: scale(0) ;
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: 0s;
+}
+.page6 section div:hover aside{
+    transform: scale(1);
+    opacity: 1;
+}
+.page6 section div aside h3{
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    color: white;
+    transform: scale(0);
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page6 section div:hover aside h3{
+    opacity: 1;
+    transform: scale(1);
+
+}
+.page6 section div aside p{
+    margin:  30px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Lucida Sans';
+    color: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page6 section div:hover aside p{
+    transform: scale(1);
+    opacity: 1;
+}
+.page6 section div aside a{
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 50px;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0) rotate(720deg);
+    transition: all .5s;
+    transition-delay: .5s;
+}
+.page6 section div:hover aside a{
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+
